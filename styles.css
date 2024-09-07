@@ -1,0 +1,217 @@
+body {
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+    background-color: #fbf1c7;
+    color: #282828;
+}
+
+body.dark-mode {
+    background-color: #282828;
+    color: #ebdbb2;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+}
+
+.light-mode .sidebar {
+    background-color: #f2e5bc;
+}
+
+.dark-mode .sidebar {
+    background-color: #1d2021;
+}
+
+.sidebar-content {
+    flex-grow: 1;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.light-mode .sidebar nav ul li a {
+    color: #282828;
+}
+
+.dark-mode .sidebar nav ul li a {
+    color: #ebdbb2;
+}
+
+.contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    transition: border-top-color 0.3s ease;
+}
+
+.light-mode .contact-info {
+    border-top: 1px solid #d5c4a1;
+}
+
+.dark-mode .contact-info {
+    border-top: 1px solid #504945;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s ease;
+}
+
+.light-mode .social-icon:hover {
+    color: #076678;
+}
+
+.dark-mode .social-icon:hover {
+    color: #83a598;
+}
+
+.light-mode .social-icon svg {
+    fill: #282828;
+}
+
+.dark-mode .social-icon svg {
+    fill: #ebdbb2;
+}
+
+.light-mode .social-icon:hover svg {
+    fill: #076678;
+}
+
+.dark-mode .social-icon:hover svg {
+    fill: #83a598;
+}
+
+#style-toggle {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #458588;
+    color: #fbf1c7;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+#style-toggle:hover {
+    background-color: #3e6c6e;
+}
+
+#style-toggle .sun-icon,
+#style-toggle .moon-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+
+.light-mode #style-toggle .sun-icon {
+    opacity: 0;
+}
+
+.light-mode #style-toggle .moon-icon {
+    opacity: 1;
+}
+
+.dark-mode #style-toggle .sun-icon {
+    opacity: 1;
+}
+
+.dark-mode #style-toggle .moon-icon {
+    opacity: 0;
+}
+
+main {
+    margin-left: 240px;
+    padding: 40px;
+    width: calc(100% - 240px);
+    display: flex;
+    justify-content: center;
+}
+
+.content-wrapper {
+    width: 33.33%;
+    min-width: 300px;
+    max-width: 690px;
+    flex-grow: 1;
+}
+
+h1, h2, h3 {
+    transition: color 0.3s ease;
+}
+
+.light-mode h1, .light-mode h2, .light-mode h3 {
+    color: #af3a03;
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3 {
+    color: #fabd2f;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+.light-mode a {
+    color: #076678;
+}
+
+.dark-mode a {
+    color: #83a598;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+p {
+    line-height: 1.5;
+}
