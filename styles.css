@@ -153,22 +153,6 @@ body.dark-mode {
     transition: opacity 0.5s ease;
 }
 
-.light-mode #style-toggle .sun-icon {
-    opacity: 0;
-}
-
-.light-mode #style-toggle .moon-icon {
-    opacity: 1;
-}
-
-.dark-mode #style-toggle .sun-icon {
-    opacity: 1;
-}
-
-.dark-mode #style-toggle .moon-icon {
-    opacity: 0;
-}
-
 main {
     margin-left: 240px;
     padding: 40px;
@@ -214,4 +198,69 @@ a {
 
 p {
     line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.sidebar-content.fade-in { animation-delay: 0.05s; }
+.sidebar nav.fade-in { animation-delay: 0.1s; }
+.sidebar nav li:nth-child(1).fade-in { animation-delay: 0.15s; }
+.sidebar nav li:nth-child(2).fade-in { animation-delay: 0.2s; }
+.sidebar nav li:nth-child(3).fade-in { animation-delay: 0.25s; }
+.sidebar .contact-info.fade-in { animation-delay: 0.3s; }
+.sidebar .contact-info h3.fade-in { animation-delay: 0.35s; }
+.sidebar .contact-info p.fade-in { animation-delay: 0.40s; }
+.sidebar .social-links.fade-in { animation-delay: 0.45s; }
+.sidebar .social-icon:nth-child(1).fade-in { animation-delay: 0.5s; }
+.sidebar .social-icon:nth-child(2).fade-in { animation-delay: 0.55s; }
+#style-toggle.fade-in { animation-delay: 0.55s; }
+
+h1.fade-in { animation-delay: 0.0.5s; }
+.intro p:nth-child(1).fade-in { animation-delay: 0.1s; }
+.intro p:nth-child(2).fade-in { animation-delay: 0.15s; }
+.intro p:nth-child(3).fade-in { animation-delay: 0.2s; }
+
+main h1.fade-in { animation-delay: 0.05s; }
+main .section.fade-in { animation-delay: 0.1s; }
+main .section h2.fade-in { animation-delay: 0.15s; }
+main .section h3.fade-in { animation-delay: 0.15s; }
+main .section p.fade-in { animation-delay: 0.20s; }
+main .section ul.fade-in { animation-delay: 0.25s; }
+
+#style-toggle {
+    position: relative;
+    overflow: hidden;
+}
+
+#style-toggle .sun-icon,
+#style-toggle .moon-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+}
+
+.light-mode #style-toggle .sun-icon,
+.dark-mode #style-toggle .moon-icon {
+    opacity: 0;
+}
+
+.light-mode #style-toggle .moon-icon,
+.dark-mode #style-toggle .sun-icon {
+    opacity: 1;
 }
